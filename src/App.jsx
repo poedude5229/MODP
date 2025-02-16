@@ -18,16 +18,14 @@ function App() {
 
   return (
     <div className="player">
-      <input type="file" id="fileInput" accept="audio/mp3" />
-      <audio src="https://bandfishbucket.s3.us-east-1.amazonaws.com/Sublime+X+Stick+Figure++Feel+Like+That+feat+Bradley+Nowell.mp3"></audio>
+      {/* <input type="file" id="fileInput" accept="audio/mp3" /> */}
+      <audio
+        src="https://bandfishbucket.s3.us-east-1.amazonaws.com/Sublime+X+Stick+Figure++Feel+Like+That+feat+Bradley+Nowell.mp3"
+        controls
+        id="audio"
+      ></audio>
       <br />
-      <button
-        onClick={() => {
-          playAudio();
-        }}
-      >
-        Play
-      </button>
+      <button onClick={playAudio}>Play</button>
       <button
         onClick={() => {
           pauseAudio();
