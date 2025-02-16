@@ -1,3 +1,5 @@
+![MODP Desktop View](https://jumblrbucket.s3.us-east-1.amazonaws.com/Screenshot+2025-02-08+130006.png)
+
 # MODP
 - MODP is a modular React component in its early stages of design. This project is open source and will be a browser based, RSS compatible audio player.
 
