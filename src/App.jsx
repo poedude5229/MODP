@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 
 const audio = document.getElementById("audio");
 function playAudio() {
@@ -25,7 +25,7 @@ function App() {
         id="audio"
       ></audio>
       <br />
-      <button onClick={playAudio}>Play</button>
+      <button onClick={() => playAudio()}>Play</button>
       <button
         onClick={() => {
           pauseAudio();
