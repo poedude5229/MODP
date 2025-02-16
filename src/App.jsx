@@ -1,9 +1,20 @@
 import { useState } from "react";
 
 const audio = document.getElementById("audio");
+function playAudio() {
+  audio.play();
+}
+
+function pauseAudio() {
+  audio.pause();
+}
+
+function setVolume() {
+  audio.volume = document.getElementById("volume").value;
+}
 
 function App() {
-  const [modeSelect, setModeSelect] = useState(0);
+  // const [modeSelect, setModeSelect] = useState(0);
 
   return (
     <div className="player">
@@ -14,12 +25,25 @@ function App() {
         onClick={() => {
           playAudio();
         }}
-      >Play</button>
+      >
+        Play
+      </button>
       <button
         onClick={() => {
           pauseAudio();
         }}
-      >Pause</button>
+      >
+        Pause
+      </button>
+      <input
+        type="range"
+        id="volume"
+        min="0"
+        max="1"
+        step="0.1"
+        value="1"
+        onChange={() => setVolume()}
+      />
     </div>
   );
 }
