@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import "./stylee.css";
+import { GrPlay } from "react-icons/gr";
 function Playa() {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -60,10 +61,13 @@ function Playa() {
           ref={audioRef}
         ></audio>
         <br />
-        <button onClick={isPlaying ? pauseAudio : playAudio}>
-          {isPlaying ? "Pause" : "Play"}
-        </button>
-        {/* <button onClick={pauseAudio}>Pause</button> */}
+        <hr className="line" />
+
+        {!isPlaying ? (
+          <GrPlay style={{ color: "white" }} onClick={playAudio} />
+        ) : (
+          <button onClick={pauseAudio}>Pause</button>
+        )}
 
         {/* Progress Bar  Gonna update this later*/}
         {/* <input
